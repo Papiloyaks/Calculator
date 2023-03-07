@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title> 
+    <style>
+        .btn {
+            
+            margin: 20px;
+            width: 200px;
+            height: 50px;
+            font-size: 17px;
+            text-align: center;
+            
+        }
+        .body {
+            background-color: black;
+            width: 300px;
+            height: 400px; 
+            border: 1px solid white;
+            border-radius: 20px;
+            margin: 100px;
+            padding-left: 20px;
+            
+        }
+        #result {
+            padding: 30px; 
+            text-align: center;
+            background-color: teal;
+            width: 150px;
+            height: 20px;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+        .get {
+            background-color: cadetblue;
+            margin: 10px;
+            color: blue;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="body"> 
+    <col-4lg></col-4lg>
+    <input type="text" class="btn" placeholder="enter the first value" id="firstValue">
+    <input type="text" class="btn" placeholder="enter the second value" id="secondValue">
+
+    <div id="two"></div>
+
+    <button class="get" onclick="multiply()">Multiply</button>
+    <button class="get" onclick="divide()">Division</button>
+    <button class="get" onclick="subtract()">Subtraction</button>
+    <button class="get" onclick="add()">Addition</button>
+    <div id="result"></div>
+    
+    <script>
+    //    document.getElementById("two").innerHTML = "Hello World";
+    //    document.getElementById("firstValue").value = 10;
+        function multiply() {
+            // alert("I am working")
+            var numberOne = document.getElementById("firstValue").value;
+            var numberTwo = document.getElementById("secondValue").value;
+            // alert(numberOne * numberTwo);
+            var answer = numberOne * numberTwo;
+            result.innerHTML = answer;
+            result.style.backgroundColor = "white";
+            // result.style.width = "200px";
+        
+            
+            
+        }
+
+        function divide () {
+            // alert ("I am working")
+            var numberOne = document.getElementById("firstValue").value;
+            var numberTwo = document.getElementById("secondValue").value;
+            if (numberOne == "" || numberTwo == "") {
+                // alert("Syntax Error")
+                var error = "Please fill in the fields";
+                result.innerHTML = answer;
+                result.style.color = "white"
+                result.style.fontFamily = "Arial"
+                // result.style.fontSize = "200px"
+                
+            } else {
+                var answer = numberOne / numberTwo;
+                result.innerHTML = answer;
+                result.style.backgroundColor = "skyblue";
+            // result.style.width = "200px";
+            // result.style.fontSize = "20px"
+            }
+        }
+
+        function subtract() {
+            var numberOne = document.getElementById("firstValue").value;
+            var numberTwo = document.getElementById("secondValue").value;
+            // alert(numberOne - numberTwo);
+            var answer = numberOne - numberTwo;
+            result.innerHTML = answer;
+            result.style.backgroundColor = "skyblue";
+            // result.style.width = "100px";
+            // result.style.fontSize = "20px"
+        }
+
+        function add() {
+            var numberOne = document.getElementById("firstValue").value;
+            var numberTwo = document.getElementById("secondValue").value;
+            // alert("I am " + numberOne + " years old and my rating is " + numberTwo);
+            // alert(parseInt(numberOne) + parseInt(numberTwo));
+            // alert(Number(numberOne) + Number(numberTwo));
+            var answer = Number(numberOne) + Number(numberTwo);
+            result.innerHTML = answer;
+            result.style.backgroundColor = "aqua";
+            // result.style.width = "100px";
+            // result.style.fontSize = "20px"
+        }
+
+        // If statement
+        var twoo = two.innerHTML;
+        // alert(twoo)
+        // if (twoo == 12) {
+        //     alert("I am even")
+        // } else if(twoo == 13) {
+        //     alert ("I am odd")
+        // } else {
+        //     alert("I am not even or odd")
+        // }
+    </script>
+</body>
+</html>
